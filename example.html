@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action = "cal.html" method = "post">
+        <label for = "username">이름: </label>
+        <input type = "text" name = "username" id = "username" required>
+        <br>
+        <label for = "email">이메일: </label>
+        <input type = "text" name = "email" id = "email" required>
+        <br>
+        <label for = "password">비밀번호: </label>
+        <input type = "password" name = "password" id = "password" required>
+        <br>
+        <label for = "gender">성별: </label>
+        <input type = "radio" name = "gender" id = "gender_male" value = "male" required> 남성
+        <input type = "radio" name = "gender" id = "gender_female" value = "female" required> 여성
+        <br>
+        <label for = "birthdate">생년월일: </label>
+        <input type = "date" name = "birthdate" id = "birthdate" required>
+        <br>
+        <input type = "submit" value = "가입하기">
+        <input type = "reset" value = "다시작성">
+</body>
+</html>
