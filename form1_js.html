@@ -86,7 +86,7 @@
         <input type = "text" name = "name" id = "name"  placeholder="Enter your name" required><br>
 <!-- 유저이름 -->
         <label for = "username">User name </label>
-        <input type = "text" name = "username" id = "username"  placeholder="Enter username" required><br>
+        <input type = "text" name = "username" id = "username"  placeholder="Enter username"onkeydown="this.value = this.value.toUpperCase()" required><br>
         <br>
 <!-- 비밀번호 -->
         <label for = "password"> Password </label>
@@ -131,9 +131,9 @@
 
 <!-- 어떻게 이 사이트를 알게 되었는가 -->
         <label for = "how do you know?">how do you know about this site?:</label><br>
-        <input type = "radio" name = "how do you know?" id = "SNS" value = "sns" required> SNS<br>
-        <input type = "radio" name = "how do you know?" id = "friend" value = "friend" required> From my friend<br>
-        <input type = "radio" name = "how do you know?" id = "advertiser" value = "advertiser" required>advertiser<br>
+        <input type = "radio" name = "how do you know?" id = "SNS" value = "sns" onchange="alert('SNS Selected')"required> SNS<br>
+        <input type = "radio" name = "how do you know?" id = "friend" value = "friend" onchange="alert('Friend Selected')" required> From my friend<br>
+        <input type = "radio" name = "how do you know?" id = "advertiser" value = "advertiser" onchange="alert('Advertiser Selected')" required>advertiser<br>
            <br>
 <!-- 사용 브라우저 -->
          <label for="browser">What is your browser:</label>
@@ -150,13 +150,15 @@
 
         <br>
         <label>
-
 <!-- 동의사항 -->
-        <input type = "checkbox" name = "agree" id = "agree" value = "yes" required > 
-        Shipping address is the same as my billing address</label><br>
-        <input type = "checkbox" name = "agree" id = "agree" value = "yes" required> Save this information for next time
+        <input type = "checkbox" name = "agree" id = "agree" value = "yes" onclick= checkAgree(this) required > 
+        Shipping address is the same as my billing address
+        <input type = "checkbox" name = "agree" id = "agree" value = "yes" onclick= checkAgree(this) required> 
+        Save this information for next time</label><br>
         <br>
         <br>
+
+<!-- 제출 -->
         <input type = "submit" value = "Continue to checkout"
             onmouseover="this.style.background='lightblue'" 
              onmouseout="this.style.background=''">
@@ -206,7 +208,17 @@
                 
             });
             
-
+            function checkAgree(checkbox){
+                if(confirm("Are you sure you want to agree this item?")) {
+                    console.log("Checked!");
+                    return true;
+                } else {
+                    console.log("Action canceled.");
+                    checkbox.checked = false; 
+                    return false; 
+                }
+            }
+         
             
         </script>
     
