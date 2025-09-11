@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+             width: 35%;
+            padding: 7px;
+            margin: 15px 0;
+            border: 2.4px solid #bbc63c;
+            border-radius: 10px;
+        }
+        body {
+            font-size: 17px;
+            color: #5a8ac8;
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #e6e6e6;
+            
+        }
+        textarea {
+            width: 40%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2.4px solid #ccc;
+            border-radius: 30px;
+            background-color: #ffffff;
+            resize: none;
+        }
+
+        select {
+            width: 15%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: #f1f1f1;
+        }
+        input[type=submit]{
+            width: 20%;
+            background-color:  #b6bd67;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 560px;
+
+        }
+        input[type=radio]{
+            width: 4%;
+            transform: scale(1.5); 
+            accent-color: #1a841f; 
+            cursor: pointer;
+        }
+          input[type=checkbox]{
+            margin-left: 500px;
+            width: 1%;
+            transform: scale(1.5); 
+            accent-color: #1a841f; 
+            cursor: pointer;
+        }
+        fieldset {
+            width: 50%;
+            border: 3px solid #f0ffbe;
+            border-radius: 30px;
+            padding: 50px;
+            margin-left: 310px;
+            background-color: hwb(86 80% 7%);
+            box-shadow: #a4a4a0 5px 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style = "color: #88b6ae; text-align: center; padding-top: 50px; padding-bottom: 20px; font-size: 40px;">Checkout form</h1>
+    <form action = "cal.html" method = "post">
+        <fieldset>
+  <legend ><h2>Billing Information</h2></legend>
+        <label for = "firstname">First name </label>
+        <input type = "text" name = "firstname" id = "firstname" required><br>
+        <label for = "lastname">Last name </label>
+        <input type = "text" name = "lastname" id = "lastname" required><br>
+        <br>
+        <label for = "username">User name </label>
+        <input type = "text" name = "username" id = "username" required><br>
+        <br>
+        <label for = "birthdate">Birth date </label>
+        <input type = "date" name = "birthdate" id = "birthdate" required><br>
+        <br>
+        <label for = "email">Email </label>
+        <input type = "text" name = "email" id = "email" required><br><br>
+        
+        <label for="favcolor";>Your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" style="width: 10%">
+            <br><br>
+        <label for = "aboutme"> About me </label><br>
+        <textarea id="comment" name="comment" rows="5" cols="40"></textarea>
+        <br><br><br>
+
+        <label for="state">State</label>
+
+            <select name="state" id="state" required>
+                    <optgroup label="Korea"></optgroup>
+                        <option value="seoul">Seoul</option>
+                        <option value="busan">Busan</option>
+                        <option value="incheon">Incheon</option>
+                    </optgroup>
+                    <optgroup label="USA"></optgroup>
+                        <option value="newyork">New York</option>
+                        <option value="losangeles">Los Angeles</option>
+            </select><br><br><br>
+
+        <label for = "address">Specific Address </label><br>
+        <input type = "text" name = "address" id = "address" required><br>
+        <br>
+      
+            
+            </fieldset><br><br>
+        <fieldset>
+              <legend><h2>About this site</h2></legend>
+        <label for = "how do you know?">how do you know about this site?:</label><br>
+        <input type = "radio" name = "how do you know?" id = "SNS" value = "sns" required> SNS<br>
+        <input type = "radio" name = "how do you know?" id = "friend" value = "friend" required> From my friend<br>
+        <input type = "radio" name = "how do you know?" id = "advertiser" value = "advertiser" required>advertiser<br>
+           <br>
+         <label for="browser">What is your browser:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist>   <br>
+        <br>
+            </fieldset>
+        <br>
+        <label>
+        <input type = "checkbox" name = "agree" id = "agree" value = "yes" required > 
+        Shipping address is the same as my billing address</label><br>
+        <input type = "checkbox" name = "agree" id = "agree" value = "yes" required> Save this information for next time
+        <br>
+        <br>
+
+        <input type = "submit" value = "Continue to checkout">
+    
+</body>
+</html>
