@@ -4,14 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      h1{
+          display: flex;
+          justify-content: center;
+        color: #c15abf;
+        padding-bottom: 20px;
+      }
+      main{
+          width: 50%;               /* 가로 너비 */
+  /* 최대 너비 제한 */
+          margin: 50px auto;        /* 상하 여백 50px, 좌우 중앙 */
+          padding: 30px;            /* 안쪽 여백 */
+          background-color: #fff;   /* 배경색 */
+  border-radius:50px;
+         padding-bottom: 80px;
+        background-color: #eee9ee;
+        font-size: 15px;
+        color: #f2a1f1;
+        font-weight: bold;
+        align-items: center;   
+       
+      }
+      body{
+        background-color: #eed7ee;
+        
+      }
+        a { 
+          color: var(--primary-ink); 
+          text-decoration: none; 
+        }
+        p
+        {
+          font-size: 12px;
+          font-family: 'Courier New', Courier, monospace;
+          color: rgb(188, 159, 192);
+        }
+        .btn-link{
+          width: 240px;
+          display: block;
+          background-color: #f2a1f1;
+          color: white;
+          border-radius: 5px;
+          padding: 30px;
+          
+          margin: 10px;
+          text-align: center;
+          cursor: pointer;
+           box-shadow: 3px 3px 6px rgba(0,0,0,0.3); 
+          
+        }
+          .btn-link:hover{
+            background-color: rgb(215, 101, 181);
+            color: rgb(255, 255, 255);
+             box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        }
+        .sidebar{
+          gap: 10px;
+          display: flex;
+          flex-direction: column;  
+          align-items: center;
+        }
+    </style>
 </head>
 <body>
+
+  <main>
+      <h1>WELCOME TO <span style="color: rgb(255, 76, 255);">&nbsp;ZZUNIY'S&nbsp;</span> ASSIGNMENT</h1>
+  <div class="sidebar">
        <nav class="topnav" aria-label="Stylesheet selection">
-        <a class="current" href="./index.html" aria-current="page">Main</a>
-        <a href="./form1.html">form1</a>
-        <a href="./form1_css.html">form1_css</a>
-        <a href="./form1_js.html">form1_js</a>
-        <a href="./form_practice.html">form_practice</a>
+        <a class="btn-link" href="./index.html" aria-current="page" >Main</a>
+        <a href="./form1.html" class="btn-link">form1</a>
+        <a href="./form1_css.html" class="btn-link">form1_css</a>
+        <a href="./form1_js.html" class="btn-link">form1_js</a>
+        <a href="./form_practice.html" class="btn-link">form_practice</a>
       </nav>
+      <p>Github @zzuniy</p>
+    </div>
+    </main>
 </body>
 </html>
